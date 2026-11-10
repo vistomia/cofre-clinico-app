@@ -33,6 +33,13 @@
           "imageWidth": 76
         }
       ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permita que o Cofre Clínico use a câmera para registrar fotos clínicas.",
+          "recordAudioAndroid": false
+        }
+      ],
       "expo-sqlite"
     ],
     "experiments": {
