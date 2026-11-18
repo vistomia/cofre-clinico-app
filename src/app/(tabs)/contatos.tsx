@@ -39,7 +39,7 @@ export default function TabTwoScreen() {
       contentContainerStyle={[styles.contentContainer, contentPlatformStyle]}>
       <ThemedView style={styles.container}>
         <ThemedView style={styles.titleContainer}>
-          <ThemedText type="subtitle">Camera</ThemedText>
+          <ThemedText type="subtitle">Contatos</ThemedText>
         </ThemedView>
       </ThemedView>
     </ScrollView>

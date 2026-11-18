@@ -7,6 +7,11 @@
     "icon": "./assets/images/icon.png",
     "scheme": "cofreclinicoapp",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4F9F8"
+    },
     "ios": {
       "icon": "./assets/expo.icon"
     },
@@ -17,6 +22,10 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
@@ -28,12 +37,15 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "backgroundColor": "#F4F9F8",
+          "image": "./assets/images/logo.png",
+          "imageWidth": 200
         }
       ],
-      "expo-sqlite"
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-file-system",
+      "expo-local-authentication"
     ],
     "experiments": {
       "typedRoutes": true,

@@ -1,6 +1,8 @@
+import React from 'react';
 import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
+import { Image, Platform, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { AnimatedIcon } from '@/components/animated-icon';
 import { HintRow } from '@/components/hint-row';
@@ -28,10 +30,22 @@ function getDevMenuHint() {
   );
 }
 
-export default function HomeScreen() {
+export default function SplashScreenView() {
   return (
-    <ThemedView style={styles.container}>
-    </ThemedView>
+    <LinearGradient
+      colors={['#EAF5F4', '#F4F9F8', '#E2F0EE']}
+      style={styles.container}
+    >
+      <SafeAreaView style={styles.safeArea}>
+        <View style={styles.heroSection}>
+          <Image
+            source={require('../../assets/images/logo.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
+        </View>
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
@@ -48,6 +62,7 @@ const styles = StyleSheet.create({
     gap: Spacing.three,
     paddingBottom: BottomTabInset + Spacing.three,
     maxWidth: MaxContentWidth,
+    justifyContent: 'center',
   },
   heroSection: {
     alignItems: 'center',
@@ -55,6 +70,11 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: Spacing.four,
     gap: Spacing.four,
+    width: '100%',
+  },
+  logoImage: {
+    width: 380,
+    height: 380,
   },
   title: {
     textAlign: 'center',
